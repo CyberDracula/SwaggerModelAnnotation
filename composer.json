@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
           "providers": [
-            "CyberDracula\\AnnotationServiceProvider"
+            "CyberDracula\\SwaggerModelAnnotation\\AnnotationServiceProvider"
           ]
         }
       }
