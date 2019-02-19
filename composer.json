@@ -15,5 +15,12 @@
         "laravel/framework": ">=5.2.0"
     },
     "require-dev": {
-    }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "CyberDracula\\AnnotationServiceProvider"
+          ]
+        }
+      }
 }

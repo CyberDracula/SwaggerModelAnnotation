@@ -1,5 +1,4 @@
 <?php
-
 namespace CyberDracula\SwaggerModelAnnotation;
 
 use Illuminate\Support\ServiceProvider;

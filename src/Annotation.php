@@ -1,6 +1,5 @@
 <?php
-
-namespace CyberDracula\ModelAnnotation;
+namespace CyberDracula\SwaggerModelAnnotation;
 
 use Log;
 use ReflectionClass;

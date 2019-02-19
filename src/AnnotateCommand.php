@@ -1,6 +1,5 @@
 <?php
-
-namespace CyberDracula\ModelAnnotation;
+namespace CyberDracula\SwaggerModelAnnotation;
 use AnnotatingClass;
 
 use DB;
