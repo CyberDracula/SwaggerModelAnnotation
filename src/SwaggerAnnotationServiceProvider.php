@@ -4,7 +4,7 @@ namespace CyberDracula\SwaggerModelAnnotation;
 use Illuminate\Support\ServiceProvider;
 use Log;
 
-class AnnotationServiceProvider extends ServiceProvider {
+class SwaggerAnnotationServiceProvider extends ServiceProvider {
     protected $commands = [
         'CyberDracula\SwaggerModelAnnotation\AnnotateCommand'
     ];
