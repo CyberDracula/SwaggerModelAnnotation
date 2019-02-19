@@ -1,0 +1,19 @@
+{
+    "name": "cyberdracula/swagger-model-annotation",
+    "license": "LGPL",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "CyberDracula"
+            }
+    ],
+    "autoload": {
+        "psr-4": { "cyberdracula\\SwaggerModelAnnotation\\": "src/" }
+    },
+    "require": {
+        "php" : ">=5.3.2",
+        "laravel/framework": ">=5.2.0"
+    },
+    "require-dev": {
+    }
+}
