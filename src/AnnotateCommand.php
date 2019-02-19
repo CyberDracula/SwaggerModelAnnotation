@@ -22,7 +22,7 @@ class AnnotateCommand extends Command {
         $modelsFiles = File::allFiles($path);
         print_r($modelsFiles);
         foreach ($modelsFiles as $modelFile) {
-            
+            print_r();
         }
 
         //old

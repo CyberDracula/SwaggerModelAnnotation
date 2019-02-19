@@ -1,6 +1,6 @@
 {
     "name": "cyberdracula/swagger-model-annotation",
-    "license": "LGPL",
+    "license": "LGPL-3.0-or-later",
     "version": "1.0",
     "authors": [
         {
