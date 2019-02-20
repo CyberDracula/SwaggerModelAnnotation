@@ -4,9 +4,12 @@ use AnnotatingClass;
 
 use DB;
 use Illuminate\Console\Command;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Database\Eloquent\Model;
 
 
 class AnnotateCommand extends Command {
+
     protected $name = 'swagger:annotate-models';
 
     protected $description = 'swagger annotate models';
@@ -15,13 +18,28 @@ class AnnotateCommand extends Command {
         parent::__construct();
     }
 
-    public function fire() {
+    public function handle() {
         //find all models
-        $path = app_path(env('SWAGGER_MODELS_FOLDER','Models')); //add SWAGGER_MODELS_FOLDER to .env if you whant to have a custom Models folder
-        $modelsFiles = File::allFiles($path);
-        print_r($modelsFiles);
+        $modelFolder = env('SWAGGER_MODELS_FOLDER','App\Models');//add SWAGGER_MODELS_FOLDER to .env if you whant to have a custom Models
+        $path = base_path($modelFolder);
+        $fs = new Filesystem;
+        $modelsFiles = $fs->allFiles($path);
         foreach ($modelsFiles as $modelFile) {
-            print_r();
+
+            $model = $modelFile->getFilename();
+            require($modelFile->getPathname());
+            foreach (get_declared_classes() as $class) {
+
+                if(strpos($class,$modelFolder) !== false) {
+                    $c = new $class;
+                    echo $table = $c->getTable();
+                    if ($c instanceof Model) {
+                        // it is a model
+                       // print_r($c);
+                    }
+                }
+            }
+
         }
 
         //old

@@ -12,7 +12,8 @@
     },
     "require": {
         "php" : ">=5.3.2",
-        "laravel/framework": ">=5.2.0"
+        "laravel/framework": ">=5.2.0",
+        "doctrine/annotations": "*"
     },
     "require-dev": {
     },
